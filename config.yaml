@@ -1,0 +1,4 @@
+configurationset:
+  - configuration:
+      name: curl_import_config
+      authentication_5c1e4ef58e: parobe::stepzen.net+1000::026884f7d69dcc4892aa1d59220f3c8d10c686be2394a46ba7f18cd16a39c4c0

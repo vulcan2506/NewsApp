@@ -1,0 +1,42 @@
+"use client";
+import { createContext , useEffect , useState } from "react";
+import {db , auth , provider } from '../firebase'
+import {getDocs, setDoc, doc  } from "firebase/firestore";
+import { collection } from "firebase/firestore";
+
+const NewsContext = createContext()
+
+const NewsProvider = ({children}) => {
+    const[post,setPost] = useState([]);
+    
+    useEffect(()=>{
+        const getPost = async () =>{
+        const querySnapshot = await getDocs(collection(db,'Posts'))
+        setPost(
+            querySnapshot.docs.map(doc =>{
+            return{
+               id: doc.id,
+               data:{
+                   title:doc.data().title,
+                   image:doc.data().image,
+                   description: doc.data().description,
+                   body:doc.data().body,
+                  
+       
+               }}
+               
+        }))
+        getPost();
+   }}
+   )
+    
+    return(
+        <div></div>
+    )
+}
+export function NewsProvider({children})
+{
+    return Objects are not valid as a React child (found: [object Promise]). If you meant to render a collection of children, use an array instead.
+
+    Call Stack
+}

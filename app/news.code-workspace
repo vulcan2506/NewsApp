@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "news",
+			"path": ".."
+		},
+		{
+			"name": "styles",
+			"path": "../../news-app/styles"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "node_modules\\typescript\\lib",
+		"typescript.enablePromptUseWorkspaceTsdk": true
+	}
+}
